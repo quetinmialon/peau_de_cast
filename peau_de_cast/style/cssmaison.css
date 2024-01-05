@@ -1,0 +1,93 @@
+html{
+    background-image: url("https://i.redd.it/zy8o2zdmvxty.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    color : whitesmoke;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    padding : 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    color : whitesmoke;
+    height: 100%;
+    width: 100%;
+}
+.pageweb{
+    overflow-y: scroll;
+    height: 80vh;
+}
+.conteneur{
+    padding : 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin : 1rem;
+    padding : 1rem;
+    border-radius: 5%;
+    background-color: rgb(112, 246, 201, 50%);
+    text-align: justify;
+    text-justify: auto;
+}
+
+.date{
+    color : rgb(255, 255, 255);
+}
+.audio{
+    width : 90%;
+}
+.icone{
+    width : 12px;
+    height : 12px;
+    
+}
+.erreur{
+    font-size : 5rem;
+    
+}
+.erreur2{
+    font-size : 3rem;
+}
+.conteneurErreur{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 650px){
+    .audio{
+        width : 400px;
+    }
+    .conteneur{
+        width : 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin : 1rem;
+        padding : 1rem;
+        border-radius: 5%;
+        background-color: rgb(112, 246, 201, 50%);
+        text-align: justify;
+        text-justify: auto;
+    }
+
+}
+@media (max-width: 1080px){
+    html{
+    background-image: none;
+    background-color: RGB(0, 105, 29);
+    }
+}   
+
+    
