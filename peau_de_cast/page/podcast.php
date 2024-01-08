@@ -10,13 +10,17 @@
 <?php include("tableau.php")?>
 
 <?php
-if (array_key_exists($_GET["id"], $podcast)) {
+if (array_key_exists($_GET["id"], $podcast)) {// condition verifiant si l'index est présent dans le tableau $podcast
     ?>
+    
     <div class="conteneur">           
-        <div class="date"><?= $podcast[$_GET["id"]]["date"] ?></div>
+        <div class = "header">
         <!-- utilisation du $_GET pour récupérer une valeur dans l'adresse URL de la page 
         permet ici de créer "plusieurs pages http" avec un seul fichier php -->
-        <h2><?= $podcast[$_GET["id"]]["name"] ?></h2>
+            <div ><a href="../page/index.php"><img  src="../image/fleche-carre-gauche.svg" alt="retour"></a></div>
+            <h2><?= $podcast[$_GET["id"]]["name"] ?></h2>
+            <div class="date"><?= $podcast[$_GET["id"]]["date"] ?></div>
+        </div>
         <div class="texte"><?=  $podcast[$_GET["id"]]["text"] ?></div>
         <audio class="audio" controls src="<?= $podcast[$_GET["id"]]["audio"] ?>"></audio>
         <!-- ouverture d'une balise script pour ajouter dynamiquement des fonds d'écran changeant en condition de l'url-->
@@ -33,6 +37,19 @@ if (array_key_exists($_GET["id"], $podcast)) {
             }
         }   
         </style>
+    </div>
+    <div class="comments">
+        
+        <?php foreach($podcast[$_GET["id"]]["comments"] as $k) {
+    ?>
+            <div class = "divCommentaire">
+                <div class="user"> <?= $k["user"]?> </div>
+                <div class="commentaire"><?= $k["commentaire"]?></div>
+            </div>
+
+
+
+    <?php    } ?>
     </div>
     <?php
 }else{

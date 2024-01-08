@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="../style/cssmaison.css">
     <title>Podcast</title>
 </head>
+
 <body>
 <h1>Podcast</h1>
     <div class="pageweb">
     
     
     <?php include("tableau.php"); // import du tableau simulant la BDD
-      foreach ($podcast as $i): ?> <!-- boucle foreach itérant dans le tableau pour créer dynamiquement le nombre voulu de div -->
+      foreach ($podcast as $i){ ?> <!-- boucle foreach itérant dans le tableau pour créer dynamiquement le nombre voulu de div -->
         <div class="conteneur">           
             <div class="date"><?= $i["date"] ?></div> 
             <!-- utilisation de la technique ?= pour raccourcir le ?php echo ()
@@ -21,7 +22,8 @@
             <div class="texte"><?= $i["text"] ?></div>
             <audio class="audio" controls src="<?= $i["audio"] ?>"></audio>
         </div>
-    <?php endforeach; ?>
+    <?php } ?>
 </div>
+<footer><a href="ajout.php">ajouter un podcast</a></footer>
 </body>
 </html>
